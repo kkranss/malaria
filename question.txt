@@ -1,0 +1,14 @@
+3. # Count the total Genome Size
+grep -v ">" Ht_clean.fna | tr -d '\n' | wc -m
+8423249
+
+4. grep -c ">" Ht_result/Ht_clean.faa
+grep -c ">" Ht_result/Ht_clean.fna
+3779
+
+5. grep -v ">" Ht_clean.fna | tr -d '\n' | awk '{ \
+    gc = gsub(/[GCgc]/, ""); \
+    total = length(); \
+    printf "GC Content: %.2f%%\n", (gc/total)*100 \
+}'
+GC Content: 40.22%
