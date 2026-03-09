@@ -66,8 +66,7 @@ scaffolds...")
 
         for line in f_in:
             if line.startswith('>'):
-                # Check if the entire header line contains any ID from the black
-list
+                # Check if the entire header line contains any ID from the blacklist
                 is_blacklisted = any(r_id in line for r_id in remove_ids)
 
                 if is_blacklisted:
