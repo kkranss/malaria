@@ -56,8 +56,7 @@ def filter_fasta(fasta_file, black_list_file, output_file):
         # One ID per line, stripping whitespace and newlines
         remove_ids = {line.strip() for line in f if line.strip()}
 
-    print(f"Processing {fasta_file}, preparing to remove {len(remove_ids)} host 
-scaffolds...")
+    print(f"Processing {fasta_file}, preparing to remove {len(remove_ids)} host scaffolds...")
 
     with open(fasta_file, 'r') as f_in, open(output_file, 'w') as f_out:
         keep = False
